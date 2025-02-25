@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: order
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:postgresql://localhost:5432/order
+    password: postgres
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        show_sql: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL=DEBUG:
